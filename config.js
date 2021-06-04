@@ -978,7 +978,7 @@ module.exports = kconfig = async (kill, message) => {
 			
 			
         case 'criador':
-			await kill.reply(from, `☀️ - Host: https://wa.me/${config.owner[0].replace('@c.us', '')}\n🌙 - Dev: https://wa.me/5518998044132`, id)
+			await kill.reply(from, `☀️ - Host: ${config.owner[0].replace('@c.us', '')}\n🌙 - Dev: `, id)
 			await kill.reply(from, mess.everhost(), id)
             break
 			
@@ -1679,7 +1679,7 @@ module.exports = kconfig = async (kill, message) => {
 			if (isGroupMsg && isGroupAdmins || isGroupMsg && isOwner) {
 				let hehe = `═✪〘 🎸 - 🐂 〙✪═\n═✪〘 🖊️ ${body.slice(10)} 〙✪═\n\n`
 				for (let i = 0; i < groupMembers.length; i++) { hehe += `- @${groupMembers[i].id.replace(/@c.us/g, '')}\n` }
-				hehe += '\n═✪〘 ❤️ - BOT Íris - 📢〙✪═'
+				hehe += '\n═✪〘 ❤️ - BOT - 📢〙✪═'
 				await sleep(2000)
 				await kill.sendTextWithMentions(from, hehe)
 			} else if (isGroupMsg) {
@@ -2742,7 +2742,6 @@ module.exports = kconfig = async (kill, message) => {
             break
 			
 			
-		case 'stickers':
 			await kill.sendText(from, mess.stickers())
 			break
 			
